@@ -1,0 +1,11 @@
+C:\CursoASPNetCore\Control\bin\Debug\netcoreapp2.0\Control.deps.json
+C:\CursoASPNetCore\Control\bin\Debug\netcoreapp2.0\Control.runtimeconfig.json
+C:\CursoASPNetCore\Control\bin\Debug\netcoreapp2.0\Control.runtimeconfig.dev.json
+C:\CursoASPNetCore\Control\bin\Debug\netcoreapp2.0\Control.dll
+C:\CursoASPNetCore\Control\bin\Debug\netcoreapp2.0\Control.pdb
+C:\CursoASPNetCore\Control\obj\Debug\netcoreapp2.0\Control.csprojAssemblyReference.cache
+C:\CursoASPNetCore\Control\obj\Debug\netcoreapp2.0\Control.csproj.CoreCompileInputs.cache
+C:\CursoASPNetCore\Control\obj\Debug\netcoreapp2.0\Control.AssemblyInfoInputs.cache
+C:\CursoASPNetCore\Control\obj\Debug\netcoreapp2.0\Control.AssemblyInfo.cs
+C:\CursoASPNetCore\Control\obj\Debug\netcoreapp2.0\Control.dll
+C:\CursoASPNetCore\Control\obj\Debug\netcoreapp2.0\Control.pdb
