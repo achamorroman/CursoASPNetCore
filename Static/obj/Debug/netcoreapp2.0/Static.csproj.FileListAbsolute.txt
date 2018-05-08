@@ -1,0 +1,11 @@
+C:\CursoASPNetCore\Static\bin\Debug\netcoreapp2.0\Static.deps.json
+C:\CursoASPNetCore\Static\bin\Debug\netcoreapp2.0\Static.runtimeconfig.json
+C:\CursoASPNetCore\Static\bin\Debug\netcoreapp2.0\Static.runtimeconfig.dev.json
+C:\CursoASPNetCore\Static\bin\Debug\netcoreapp2.0\Static.dll
+C:\CursoASPNetCore\Static\bin\Debug\netcoreapp2.0\Static.pdb
+C:\CursoASPNetCore\Static\obj\Debug\netcoreapp2.0\Static.csprojAssemblyReference.cache
+C:\CursoASPNetCore\Static\obj\Debug\netcoreapp2.0\Static.csproj.CoreCompileInputs.cache
+C:\CursoASPNetCore\Static\obj\Debug\netcoreapp2.0\Static.AssemblyInfoInputs.cache
+C:\CursoASPNetCore\Static\obj\Debug\netcoreapp2.0\Static.AssemblyInfo.cs
+C:\CursoASPNetCore\Static\obj\Debug\netcoreapp2.0\Static.dll
+C:\CursoASPNetCore\Static\obj\Debug\netcoreapp2.0\Static.pdb
