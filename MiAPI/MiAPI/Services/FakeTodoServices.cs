@@ -1,33 +1,10 @@
 ﻿using MiAPI.Models;
-using MiAPI.Persistence;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MiAPI.Services
 {
-    public interface ITodoService
-    {
-        IList<TodoList> GetTodoLists();
-    }
-
-    public class TodoService : ITodoService
-    {
-        private readonly ApplicationContext _context;
-
-        public TodoService(ApplicationContext context)
-        {
-            _context = context;
-        }
-
-        public IList<TodoList> GetTodoLists()
-        {
-            return _context.TodoLists.Include(t => t.Items).ToList();
-        }
-    }
-
     public class FakeTodoService : ITodoService
     {
         public FakeTodoService() { }
@@ -53,6 +30,11 @@ namespace MiAPI.Services
                 list1
             };
             return listCollection;
+        }
+
+        public TodoList GetTodoList(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
