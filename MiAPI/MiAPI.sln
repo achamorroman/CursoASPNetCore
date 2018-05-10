@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiAPI", "MiAPI\MiAPI.csproj", "{310D151B-81FA-43C5-9E0A-E42E7F588434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiAPI", "MiAPI\MiAPI.csproj", "{310D151B-81FA-43C5-9E0A-E42E7F588434}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CFE016F-28E0-4605-AFCA-E3D748E6A9CD}"
+	ProjectSection(SolutionItems) = preProject
+		DbContext.txt = DbContext.txt
+		TodoController.txt = TodoController.txt
+		TodoListController.txt = TodoListController.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
