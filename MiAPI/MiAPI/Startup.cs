@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MiAPI.Persistence;
+using MiAPI.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -24,6 +27,11 @@ namespace MiAPI
         public void ConfigureServices(IServiceCollection services)
         {
             // Configuración de los servicios que utilizará mi aplicación.
+            services.AddDbContext<ApplicationContext>(
+                    options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+                );
+
+            services.AddTransient<ITodoService, FakeTodoServices>();
 
             services.AddMvc();
         }
