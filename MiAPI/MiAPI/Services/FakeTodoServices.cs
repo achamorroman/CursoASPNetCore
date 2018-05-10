@@ -1,4 +1,6 @@
 ﻿using MiAPI.Models;
+using MiAPI.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +13,24 @@ namespace MiAPI.Services
         IList<TodoList> GetTodoLists();
     }
 
-    public class FakeTodoServices : ITodoService
+    public class TodoService : ITodoService
     {
-        public FakeTodoServices() { }
+        private readonly ApplicationContext _context;
+
+        public TodoService(ApplicationContext context)
+        {
+            _context = context;
+        }
+
+        public IList<TodoList> GetTodoLists()
+        {
+            return _context.TodoLists.Include(t => t.Items).ToList();
+        }
+    }
+
+    public class FakeTodoService : ITodoService
+    {
+        public FakeTodoService() { }
 
         public IList<TodoList> GetTodoLists()
         {
