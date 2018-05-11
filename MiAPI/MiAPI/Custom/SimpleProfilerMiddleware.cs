@@ -29,6 +29,5 @@ namespace MiAPI.Custom
 
             _logger.LogInformation(logString);
         }
-
     }
 }
