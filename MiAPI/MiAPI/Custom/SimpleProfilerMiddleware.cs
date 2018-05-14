@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace MiAPI.Custom
 {
@@ -25,7 +23,9 @@ namespace MiAPI.Custom
             await _next(context);
             var path = context.Request.Path;
             var statusCode = context.Response.StatusCode;
-            _logger.LogInformation($"Path='{path}', status={statusCode}, time={watch.Elapsed}");
+
+            var logString = $"Log desde Clase middleware: Path= '{path}', status={statusCode}, time={watch.Elapsed}";
+            _logger.LogInformation(logString);
         }
     }
 }
