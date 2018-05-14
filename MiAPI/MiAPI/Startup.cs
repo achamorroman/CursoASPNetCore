@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using MiAPI.Custom;
 using MiAPI.Persistence;
 using MiAPI.Services;
 using Microsoft.AspNetCore.Builder;
@@ -37,13 +39,29 @@ namespace MiAPI
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             // Configuración del Pipeline de ASP NET Core
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            loggerFactory.AddConsole();
+            loggerFactory.AddDebug();
+            var logger = loggerFactory.CreateLogger("Profiler");
+
+            // MIddleware simple
+            app.Use(async (context, next) =>
+            {
+                var watch = Stopwatch.StartNew();
+                await next();
+                var path = context.Request.Path;
+                var statusCode = context.Response.StatusCode;
+                logger.LogInformation($"Path='{path}', status={statusCode}, time={watch.Elapsed}");
+            });
+
+            app.UseMiddleware<SimpleProfilerMiddleware>();
 
             app.UseMvc();
         }
